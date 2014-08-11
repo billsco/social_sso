@@ -8,7 +8,7 @@ This isn't intended as true **authentication**.  It may be suitable for that, bu
 
 1. Clone this repositiory somewhere onto your web root.
 2. Configure Hybridauth
---*Contained within this repository is an install of hybridauth.  The `hybridauth` directory in this repository is the same as that which comes with the "normal" Hybridauth.  Follow [their instructions](http://hybridauth.sourceforge.net/userguide/Install.html).  Note that for your benifit, I renamed the `install.php` file to `install.php_HIDE`.  You can move it back when configuring your hybridauth.
+--* Contained within this repository is an install of hybridauth.  The `hybridauth` directory in this repository is the same as that which comes with the "normal" Hybridauth.  Follow [their instructions](http://hybridauth.sourceforge.net/userguide/Install.html).  Note that for your benifit, I renamed the `install.php` file to `install.php_HIDE`.  You can move it back when configuring your hybridauth.
 
 ##Consuming in your application
 
