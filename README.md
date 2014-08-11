@@ -1,3 +1,7 @@
+# Social SSO
+
+A small project wrapping [Hybridauth] (http://hybridauth.sourceforge.net/) with a login page using [Social Buttons] (https://github.com/lipis/bootstrap-social).  In other words, two great projects I'm simply gluing together with a few lines of PHP.
+
 Don't forget to change the base URL in "config.php"
 
 TODO Credit the dude who came up with the social icons/css (https://github.com/lipis/bootstrap-social)
