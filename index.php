@@ -4,15 +4,8 @@
 
 	session_start();
 	
-//	$config = "../../ha/hybridauth/config.php";
-//	require_once("../../ha/hybridauth/Hybrid/Auth.php");
-
 	$config = __DIR__ . "/hybridauth/config.php";
 	require_once( __DIR__ . "/hybridauth/Hybrid/Auth.php");
-	
-	error_log("(sso/index.php) GREPFORME ====================");
-	error_log("(sso/index.php) Session " . $_SESSION["count"]);
-	$_SESSION["count"] = $_SESSION["count"]+1;
 	
 	$origApp = $_GET["orig_app"];
 	
@@ -27,21 +20,17 @@
 	
 	$providerName = $_GET["provNetwork"];
 	
-	
 	$haOpts = array("hauth_return_to" => urldecode($origApp));
 	
 	$ha = new Hybrid_Auth($config);
-
 	
 	$connectedProviders = $ha->getConnectedProviders();
 
 	if((sizeof($connectedProviders) == 0)) {
-		error_log("(sso/index.php)  connectedProviders == 0");
+
 		if($providerName) {
-			error_log("(sso/index.php) Provider name: |" . $providerName . "|");
-			error_log("GREPFORME: connectedProviders 0");
 			try {
-				$twitter = $ha->authenticate( $providerName, $haOpts);
+				$foo = $ha->authenticate( $providerName, $haOpts);
 				//We should not get here.  It either redirects back to provider or original page
 			}
 			catch( Exception $e) {
@@ -50,20 +39,9 @@
 				$errorMessage = "Bill needs to fix this";
 			}
 		}
-
-/*		
-		if($twitter) {
-			//Clean this up.  Not used anymore once I figured
-			//out how to use the options to authenticate
-			error_log("GREPFORME: got past twitter.  Manual redirect");
-			header("Location: " . urldecode($origApp));	
-			die();				
-		}	
-*/	
 	}
 	else {
 		//Shouldn't need this as HA does this for us.
-		error_log("(sso/index.php) connectedProviders > 0, manual redirect");
 		header("Location: " . urldecode($origApp));	
 		die();			
 
