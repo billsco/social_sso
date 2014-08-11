@@ -1,6 +1,6 @@
 # Social SSO
 
-A small project wrapping [Hybridauth] (http://hybridauth.sourceforge.net/) with a login page using [Social Buttons] (https://github.com/lipis/bootstrap-social).  In other words, two great projects I'm simply gluing together with a few lines of PHP.
+A small project wrapping [Hybridauth] (http://hybridauth.sourceforge.net/) with a login page using [Social Buttons] (https://github.com/lipis/bootstrap-social).  In other words, two great projects I'm simply gluing together with a few lines of PHP.  I've included those distributions as I found them, so licensing and all should be preserved.
 
 This isn't intended as true **authentication**.  It may be suitable for that, but I haven't really dug for holes (there may be some).  My intent was to simple provide a mechanism to **identify** users of a multi-player game, in a manner which is unique and convienent.  
 
